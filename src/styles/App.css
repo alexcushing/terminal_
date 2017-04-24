@@ -1,0 +1,191 @@
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.bubble {
+  position: fixed;
+  bottom: 25px;
+  right: 50%;
+  background-color: black;
+  color: white;
+  width: 40px;
+  height: 30px;
+  transition: .3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bubbleBig {
+  position: fixed;
+  bottom: calc(100% - 650px);
+  right: calc(50% - 400px);
+  background-color: black;
+  color: white;
+  width: 800px;
+  height: 500px;
+  transition: .15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bubble:hover {
+  bottom: 35px;
+  transition: .3s ease;
+}
+
+.run {
+  color: #ff6b6b;
+}
+
+.term-container {
+  color: white;
+  margin-top: 150px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  width: 800px;
+  height: 500px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  /*border-top: solid 22px grey;*/
+  transition: .15s ease;
+  border-radius: 10px;
+  border: 0px;
+  background: black;
+  /*padding: 20px 10px 20px 10px;*/
+}
+
+.term-container-full {
+  align-self: center;
+  transition: .15s ease;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  /*border-top: solid 22px grey;*/
+  border-radius: 10px;
+  background: black;
+  /*padding: 20px 10px 20px 10px;*/
+}
+
+.term-container-small {
+  transition: .15s ease;
+  align-self: flex-end;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  overflow: hidden;
+  width: 40px;
+  height: 30px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  /*border-top: solid 22px grey;*/
+  border-radius: 10px;
+  background: black;
+  margin-bottom: 25px;
+  /*padding: 20px 10px 20px 10px;*/
+}
+
+
+
+.status-bar {
+  cursor: move;
+  height: 25px;
+  border-radius: 9px 9px 0 0;
+  background: rgb(86.3%, 86.3%, 86.3%);
+  border: 3px solid rgb(86.3%, 86.3%, 86.3%);
+  border: none;
+  display: flex;
+  padding: 3px;
+}
+
+.bar-button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.bar-button:hover{
+  opacity: .5;
+}
+
+.x-out {
+  background: indianred;
+}
+
+.x-out:hover .x-out::after{
+  content: "x";
+  color: white;
+}
+
+.minus-down {
+  background: rgb(100%, 84.3%, 0%);
+}
+.expand {
+  background-color: green;
+}
+
+.Cursor{
+  display: none;
+}
+
+.term-textarea::after{
+  content: "_";
+  font-weight: bold;
+  animation: blink .8s infinite;
+}
+.term-textarea::before{
+  content: "> ";
+}
+
+.term-textarea {
+  flex: 1;
+  font-family: Consolas, monaco, monospace;
+  padding: 20px;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  height: 100%;
+  border: none;
+  background: black;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  width: 100%;
+  resize: none;
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
