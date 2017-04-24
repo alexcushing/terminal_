@@ -75,7 +75,7 @@ class App extends Component {
                   <div name="term" id="term-textarea" className="term-textarea">
                     <span className='run'>./Alex_Cushing</span>
                     <br/>
-                    Welcome to my portfolio!
+                    Welcome to my fun terminal!
                   </div>
                 </Typist>
               </div>
