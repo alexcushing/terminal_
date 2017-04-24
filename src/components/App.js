@@ -67,9 +67,9 @@ class App extends Component {
                 }
               >
                 <div className="status-bar">
-                  <span className="x-out bar-button" onClick={this.close} />
-                  <span className="expand bar-button" onClick={this.full} />
-                  <span className="minus-down bar-button" onClick={this.hide} />
+                  <span className="x-out bar-button" onClick={this.close}>x</span>
+                  <span className="expand bar-button" onClick={this.full}>+</span>
+                  <span className="minus-down bar-button" onClick={this.hide}>-</span>
                 </div>
                 <Typist stdTypingDelay={1}>
                   <div name="term" id="term-textarea" className="term-textarea">
