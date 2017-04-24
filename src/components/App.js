@@ -59,22 +59,30 @@ class App extends Component {
           : <div className="App">
               <div
                 className={
-                  this.state.full
-                    ? 'term-container-full'
-                    : this.state.closing
-                        ? 'term-container-small'
-                        : 'term-container'
+                  this.state.full && this.state.closing
+                    ? 'term-container-small'
+                    : this.state.full
+                        ? 'term-container-full'
+                        : this.state.closing
+                            ? 'term-container-small'
+                            : 'term-container'
                 }
               >
                 <div className="status-bar">
-                  <span className="x-out bar-button" onClick={this.close}>x</span>
-                  <span className="expand bar-button" onClick={this.full}>+</span>
-                  <span className="minus-down bar-button" onClick={this.hide}>-</span>
+                  <span className="x-out bar-button" onClick={this.close}>
+                    x
+                  </span>
+                  <span className="expand bar-button" onClick={this.full}>
+                    +
+                  </span>
+                  <span className="minus-down bar-button" onClick={this.hide}>
+                    -
+                  </span>
                 </div>
                 <Typist stdTypingDelay={1}>
                   <div name="term" id="term-textarea" className="term-textarea">
-                    <span className='run'>./Alex_Cushing</span>
-                    <br/>
+                    <span className="run">./Alex_Cushing</span>
+                    <br />
                     Welcome to my fun terminal!
                   </div>
                 </Typist>
