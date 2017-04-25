@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
 import Typist from 'react-typist';
+import Draggable from 'react-draggable';
 
 class App extends Component {
   state = {
@@ -83,7 +84,27 @@ class App extends Component {
                   <div name="term" id="term-textarea" className="term-textarea">
                     <span className="run">./Alex_Cushing</span>
                     <br />
-                    Welcome to my fun terminal!
+                    <span className="term-text">
+                      Welcome to my fun terminal!
+                    </span>
+                    <br />
+                    <span className="term-text">
+                      checkout my
+                      {' '}
+                      <a href="http://www.alexcushing.com" target="_blank">
+                        portfolio
+                      </a>
+                      ,{' '}<a href="https://github.com/alexcushing" target="_blank">
+                        Github
+                      </a>
+                      , and{' '}<a
+                        href="https://www.linkedin.com/in/alexandercushing/"
+                        target="_blank"
+                      >
+                        LinkedIn
+                      </a>
+                      !
+                    </span>
                   </div>
                 </Typist>
               </div>
