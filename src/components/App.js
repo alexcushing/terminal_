@@ -4,6 +4,7 @@ import Typist from 'react-typist';
 import Draggable from 'react-draggable';
 
 class App extends Component {
+  
   state = {
     closed: false,
     closing: false,
